@@ -1,0 +1,114 @@
+.selectSort {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.filterContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.productsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.sortTitle {
+  font-weight: 600;
+}
+
+/* For screens smaller than 1440px */
+@media (max-width: 1440px) and (min-width: 1024px) {
+  .filterContainer {
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .productsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 32px;
+  }
+  
+  .productsContainer {
+    /* width: 100%;
+    height: auto; */
+    gap: 20px;
+  }
+}
+
+/* For screens smaller than 1024px */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .filterContainer {
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+
+  .productsContainer {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .filterContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .productsContainer {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 520px) and (min-width: 420px){
+  .filterContainer {
+    gap: 16px;
+  }
+
+  .productsContainer {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 350px;
+    height: auto;
+  }
+ 
+}
+
+/* For screens smaller than 420px */
+@media (max-width: 420px) {
+  .selectSort {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .filterContainer {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+   
+  }
+
+  .productsContainer {
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 200px;
+    gap: 12px;
+  }
+
+  .sortTitle {
+    font-weight: 500;
+    
+   
+  }
+}
+
+

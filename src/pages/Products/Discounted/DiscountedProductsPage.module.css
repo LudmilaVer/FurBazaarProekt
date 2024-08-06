@@ -1,0 +1,100 @@
+.selectSort {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.filterContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.productsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.sortTitle {
+  font-weight: 600;
+}
+
+/* For screens from 1440px to 1024px */
+@media (max-width: 1440px) {
+  .filterContainer {
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .productsContainer {
+    gap: 24px;
+  }
+  .productsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 32px;
+  }
+  .sortTitle {
+    font-size: 1.2em;
+  }
+}
+
+/* For screens from 1024px to 768px */
+@media (max-width: 1024px) {
+  .filterContainer {
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .productsContainer {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 24px;
+  }
+
+  .sortTitle {
+    font-size: 1.1em;
+  }
+}
+
+/* For screens from 768px to 520px */
+@media (max-width: 768px) {
+  .filterContainer {
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .productsContainer {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 16px;
+    
+  }
+
+  .sortTitle {
+    font-size: 1em;
+  }
+}
+
+/* For screens 520px and below */
+@media (max-width: 520px) {
+  .filterContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .productsContainer {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 450px;
+    height: auto;
+  }
+
+  .sortTitle {
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,216 @@
+.productCard {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  transition: transform var(--transition-duration);
+  background-color: var(--color-light);
+  border-radius: var(--border-radius-large);
+  border: 1px solid var(--color-light-gray);
+}
+
+.productImageContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.productImage {
+  width: 100%;
+  height: 284px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+.productImage:hover{
+  transform: scale(0.95);
+}
+.discountFlag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: var(--color-blue);
+  color: var(--color-light);
+  padding: 2px 8px;
+  border-radius: var(--border-radius-small);
+}
+
+.addButtonContainer {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  width: 100%;
+  z-index: 10;
+  opacity: 0;
+}
+
+.addButtonContainer button {
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+}
+
+.productCard:hover .addButtonContainer {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.productCard:hover .addButtonContainer {
+  animation: popIn 0.2s forwards;
+}
+
+@keyframes popIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.productInfo {
+  padding: 20px 32px 32px 32px;
+}
+
+.productTitle {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: end;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.currentPrice {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.originalPrice {
+  font-weight: 500;
+  line-height: 28px;
+  text-decoration: line-through;
+  color: var(--color-dark-gray);
+}
+
+.noDiscount .originalPrice {
+  display: none;
+}
+
+/* Устройства с шириной экрана от 1440px до 1024px */
+@media (max-width: 1440px) and (min-width: 1024px) {
+  .productImage {
+    height: 250px;
+  }
+
+  .productInfo {
+    padding: 16px 24px 24px 24px;
+  }
+
+  .productTitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .currentPrice {
+    font-size: 36px;
+  }
+
+  .priceContainer {
+    gap: 12px;
+    margin-top: 16px;
+  }
+}
+
+/* Устройства с шириной экрана от 1024px до 768px */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .productImage {
+    height: 200px;
+  }
+
+  .productInfo {
+    padding: 14px 20px 20px 20px;
+  }
+
+  .productTitle {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .currentPrice {
+    font-size: 32px;
+  }
+
+  .priceContainer {
+    gap: 10px;
+    margin-top: 14px;
+  }
+}
+
+/* Устройства с шириной экрана от 768px до 520px */
+@media (max-width: 768px) and (min-width: 520px) {
+  .productImage {
+    height: 180px;
+  }
+
+  .productInfo {
+    padding: 12px 18px 18px 18px;
+  }
+
+  .productTitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .currentPrice {
+    font-size: 28px;
+  }
+
+  .priceContainer {
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .addButtonContainer button {
+    width: calc(100% - 24px);
+  }
+}
+
+
+@media (max-width: 520px) and (min-width: 420px) {
+  .productImage {
+
+    height: 160px;
+  }
+
+  .productInfo {
+    padding: 10px 16px 16px 16px;
+  }
+
+  .productTitle {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .currentPrice {
+    font-size: 24px;
+  }
+
+  .priceContainer {
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .addButtonContainer button {
+    width: calc(100% - 16px);
+  }
+}

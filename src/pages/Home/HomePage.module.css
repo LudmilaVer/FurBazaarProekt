@@ -1,0 +1,107 @@
+.contentStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: #fff;
+  position: absolute;
+}
+
+h1 {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 105.6px;
+  text-align: left;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.mainBgStyle {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 100%;
+  top: 128px;
+  left: 0;
+}
+
+
+
+
+.animationStyle {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Задайте нужный размер анимации */
+  height: 500px;
+}
+
+/* Устройства с шириной экрана от 1440px до 1024px */
+@media (max-width: 1440px) and (min-width: 1024px) {
+  h1 {
+    font-size: 80px;
+    line-height: 88px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  .mainBgStyle {
+    height: 500px;
+    top: 100px;
+  }
+}
+
+/* Устройства с шириной экрана от 1024px до 768px */
+@media (max-width: 1024px) and (min-width: 768px) {
+  h1 {
+    font-size: 64px;
+    line-height: 70.4px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+
+  .mainBgStyle {
+    height: 400px;
+    top: 80px;
+  }
+}
+
+/* Устройства с шириной экрана от 768px до 520px */
+@media (max-width: 768px) and (min-width: 520px) {
+  h1 {
+    font-size: 48px;
+    line-height: 52.8px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .mainBgStyle {
+    height: 300px;
+    top: 60px;
+  }
+
+  .contentStyle {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 520px) and (min-width: 418px) {
+  h1 {
+    font-size: 38px;
+    line-height: 52.8px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .mainBgStyle {
+    height: 300px;
+    top: 60px;
+  }
+
+  
+}
