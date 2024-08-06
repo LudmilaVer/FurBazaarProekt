@@ -2,7 +2,7 @@
   margin-bottom: 106px;
 }
 
-.gridCategoriesContainer {
+.GridCatBox {
   display: grid;
   grid-template-columns: repeat(4, minmax(200px, 1fr));
   gap: 32px;
@@ -14,11 +14,11 @@
   margin-bottom: 40px;
 }
 
-.gridCategoriesItem {
+.GridCatItem {
   overflow: hidden;
 }
 
-.categoryItem {
+.CatItem {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -26,7 +26,7 @@
   text-align: center;
 }
 
-.categoryImage {
+.CatImage {
   width: 100%;
   height: 350px;
   object-fit: cover;
@@ -35,11 +35,11 @@
 
 }
 
-.categoryImage:hover {
+.CatImage:hover {
   transform: scale(0.95); /* Уменьшение размера до 95% */
 }
 
-.categoryName {
+.CatImage {
   margin-top: 16px;
   font-size: 20px;
   font-weight: 500;
@@ -49,16 +49,16 @@
 
 /* Устройства с шириной экрана от 1440px до 1024px */
 @media (max-width: 1440px) and (min-width: 1024px) {
-  .gridCategoriesContainer {
+  .GridCatBox {
     grid-template-columns: repeat(4, minmax(200px, 1fr));
     gap: 24px;
   }
 
-  .categoryImage {
+  .CatImage {
     height: 300px;
   }
 
-  .categoryName {
+  .CatImage {
     font-size: 18px;
     line-height: 24px;
   }
@@ -66,17 +66,17 @@
 
 /* Устройства с шириной экрана от 1024px до 768px */
 @media (max-width: 1024px) and (min-width: 768px) {
-  .gridCategoriesContainer {
+  .GridCatBox {
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     gap: 20px;
   }
 
-  .categoryImage {
+  .CatImage {
     height: 250px;
    
   }
 
-  .categoryName {
+  .CatImage {
     font-size: 16px;
     line-height: 22px;
   }
@@ -84,16 +84,16 @@
 
 /* Устройства с шириной экрана от 768px до 520px */
 @media (max-width: 768px) and (min-width: 520px) {
-  .gridCategoriesContainer {
+  .GridCatBox {
     grid-template-columns: repeat(2, minmax(150px, 1fr));
     gap: 16px;
   }
 
-  .categoryImage {
+  .CatImage {
     height: 200px;
   }
 
-  .categoryName {
+  .CatImage {
     font-size: 14px;
     line-height: 20px;
   }
@@ -101,17 +101,17 @@
 
 /* Устройства с шириной экрана от 520px до 420px */
 @media (max-width: 520px) and (min-width: 420px) {
-  .gridCategoriesContainer {
+  .GridCatBox {
     grid-template-columns: 1fr;
     gap: 12px;
   }
 
-  .categoryImage {
+  .CatImage {
     width: 350px;
     height: 200px;
   }
 
-  .categoryName {
+  .CatImage {
     font-size: 12px;
     line-height: 18px;
   }

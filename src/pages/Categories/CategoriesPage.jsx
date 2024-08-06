@@ -37,12 +37,12 @@ const CategoriesBlock = () => {
           <h2>Categories</h2>
         </div>
 
-        <ul className={styles.gridCategoriesContainer}>
+        <ul className={styles.GridCatBox}>
           {categories.slice(0, 8).map((category) => (
-            <li key={category.id} className={styles.gridCategoriesItem}>
-              <Link to={`/categories/${category.id}`} className={styles.categoryItem}>
-                <img src={`http://localhost:3333${category.image}`} alt={category.title} className={styles.categoryImage} />
-                <h3 className={styles.categoryName}>
+            <li key={category.id} className={styles.GridCatItem}>
+              <Link to={`/categories/${category.id}`} className={styles.CatItem}>
+                <img src={`http://localhost:3333${category.image}`} alt={category.title} className={styles.CatImage} />
+                <h3 className={styles.CatImage}>
                   {category.title}
                 </h3>
               </Link>

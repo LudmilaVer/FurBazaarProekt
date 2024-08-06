@@ -1,42 +1,56 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 import styles from './catHeader.module.css';
 
 const Hedcat = () => {
-  const [categories, allCat] = useState([]);
+  // Создаем состояние для хранения списка категорий
+  const [categoryList, AllCat] = useState([]);
 
+  // Используем useEffect для загрузки данных при монтировании компонента
   useEffect(() => {
-    // Асинхронная функция для получения данных о категориях
-    const fetchCategories = async () => {
+    // Асинхронная функция для загрузки данных о категориях с сервера
+    const loadCategoryData = async () => {
       try {
+        // Делаем GET-запрос на сервер для получения всех категорий
         const response = await axios.get('http://localhost:3333/categories/all');
-        allCat(response.data); // Устанавливаем полученные данные в состояние
+        // Обновляем состояние с полученными данными
+        AllCat(response.data);
       } catch (error) {
-        console.error("Ошибка при получении категорий:", error);
+        // Обработка ошибки в случае неудачного запроса
+        console.error("Error fetching categories:", error);
       }
     };
 
-    fetchCategories(); // Вызов функции для получения данных
-  }, []); // Пустой массив зависимостей означает, что эффект выполняется только один раз при монтировании компонента
+    // Вызов функции для загрузки данных
+    loadCategoryData();
+  }, []); // Пустой массив зависимостей означает, что эффект выполнится только один раз при монтировании компонента
 
   return (
-    <div className={styles.globalContainer}>
-      <div className={styles.categoriesBlock}>
-        <div className={styles.titleBlock}>
-          <h2>Категории</h2>
-          <div className={styles.titleBlockLine}></div>
-          <Link to="/categories" className={styles.titleBlockButton}>
-            Все категории
+    <div className="globalContainer">
+      <div className={styles.CatBox}>
+        {/* Блок заголовка */}
+        <div className="titleBlock">
+          <h2>Categories</h2>
+          <div className="titleBlockLine"></div>
+          {/* Ссылка на страницу со всеми категориями */}
+          <Link to="/categories" className="titleBlockButton">
+            All categories
           </Link>
         </div>
 
-        <ul className={styles.gridCategoriesContainer}>
-          {categories.slice(0, 4).map((category) => (
-            <li key={category.id} className={styles.gridCategoriesItem}>
-              <Link to={`/categories/${category.id}`} className={styles.categoryItem}>
-                <img src={`http://localhost:3333${category.image}`} alt={category.title} className={styles.categoryImage} />
-                <h3 className={styles.categoryName}>{category.title}</h3>
+        {/* Список категорий, отображаем только первые четыре */}
+        <ul className={styles.GridCatBox}>
+          {categoryList.slice(0, 4).map((category) => (
+            <li key={category.id} className={styles.GridCatItem}>
+              {/* Ссылка на страницу категории */}
+              <Link to={`/categories/${category.id}`} className={styles.CatItem}>
+                {/* Изображение категории */}
+                <img src={`http://localhost:3333${category.image}`} alt={category.title} className={styles.CatImage} />
+                {/* Название категории */}
+                <h3 className={styles.CatImage}>
+                  {category.title}
+                </h3>
               </Link>
             </li>
           ))}

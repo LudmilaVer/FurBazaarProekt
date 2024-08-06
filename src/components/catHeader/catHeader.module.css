@@ -1,8 +1,8 @@
-.globalContainer {
+.CatBox {
   margin-top: var(--blocks-margin-y);
 }
 
-.categoriesBlock {
+.GridCatBox {
   display: grid;
   grid-template-columns: repeat(4, minmax(200px, 1fr));
   gap: 32px;
@@ -10,31 +10,38 @@
   z-index: 10;
 }
 
-.gridCategoriesItem {
+.GridCatItem {
   overflow: hidden;
 }
 
-.categoryItem {
+.CatItem {
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
   text-align: center;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.categoryImage {
+.CatImage {
   width: 100%;
   height: 350px;
   object-fit: cover;
   border-radius: var(--border-radius-large);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-.categoryImage:hover {
-  transform: scale(0.95);
+.CatItem:hover {
+  transform: scale(1.05) rotate(3deg);
+  color: #166bb9; /* Томато */
 }
 
-.categoryName {
+.CatItem:hover .CatImage {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+
+.CatImage {
   margin-top: 16px;
   font-size: 20px;
   font-weight: 500;
@@ -42,68 +49,68 @@
 }
 
 @media (max-width: 1440px) and (min-width: 1024px) {
-  .categoriesBlock {
+  .GridCatBox {
     gap: 24px;
   }
 
-  .categoryImage {
+  .CatImage {
     height: 300px;
   }
 
-  .categoryName {
+  .CatImage {
     font-size: 18px;
     line-height: 24px;
   }
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
-  .categoriesBlock {
+  .GridCatBox {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
     gap: 20px;
   }
 
-  .categoryImage {
+  .CatImage {
     height: 250px;
   }
 
-  .categoryName {
+  .CatImage {
     font-size: 16px;
     line-height: 22px;
   }
 }
 
 @media (max-width: 768px) and (min-width: 520px) {
-  .categoriesBlock {
+  .GridCatBox {
     grid-template-columns: repeat(2, minmax(150px, 1fr));
     gap: 16px;
   }
 
-  .categoryImage {
+  .CatImage {
     height: 200px;
   }
 
-  .categoryName {
+  .CatImage {
     font-size: 14px;
     line-height: 20px;
   }
 }
 
 @media (max-width: 520px) {
-  .categoriesBlock {
+  .GridCatBox {
     grid-template-columns: 1fr;
     gap: 12px;
   }
  
-  .categoryImage {
+  .CatImage {
     width: 100%;
   }
 
-  .categoryName {
+  .CatImage {
     font-size: 20px;
     line-height: 18px;
   }
 
-  .categoriesBlock {
+  .CatBox {
     margin-top: var(--blocks-margin-y);
   }
 }
