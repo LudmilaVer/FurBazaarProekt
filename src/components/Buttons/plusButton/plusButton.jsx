@@ -1,20 +1,21 @@
 import { useState } from 'react';
-import styles from './plusButton.module.css';
+import styles from './plusButton.module.css'; 
 
-function AddBlueButton({ onClick }) {
+function PlusButton({ onClick }) {
   const [state, setState] = useState('normal');
 
+  // Обработчик клика по кнопке
   const handleClick = (e) => {
-    setState('added');
+    setState('added'); // Устанавливаем состояние 'added' при клике
     if (onClick) {
-      onClick(e);
+      onClick(e); // Выполняем переданный обработчик клика
     }
-    setTimeout(() => setState('normal'), 2000);
+    setTimeout(() => setState('normal'), 2000); // Возвращаем состояние 'normal' через 2 секунды
   };
 
   return (
     <button
-      className={`${styles.addBlueButton} ${state === 'added' ? styles.addedState : ''}`}
+      className={`${styles.plusButton} ${state === 'added' ? styles.plusedState : ''}`}
       onClick={handleClick}
     >
       {state === 'added' ? 'Added' : 'Add to cart'}
@@ -22,4 +23,4 @@ function AddBlueButton({ onClick }) {
   );
 }
 
-export default AddBlueButton;
+export default PlusButton;

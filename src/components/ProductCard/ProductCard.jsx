@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/cartSlice';
-import plusButton from '../Buttons/plusButton/plusButton';
+import PlusButton from '../Buttons/plusButton/plusButton';
 import styles from './ProductCard.module.css';
 
 const ProductCard = ({ product }) => {
@@ -31,7 +31,7 @@ const ProductCard = ({ product }) => {
           </div>
         )}
         <div className={styles.addButtonContainer}>
-          <plusButton onClick={handleAddToCart} />
+          <PlusButton onClick={handleAddToCart} />
         </div>
       </div>
       <Link to={`/products/${product.id}`} className={styles.productLink}>

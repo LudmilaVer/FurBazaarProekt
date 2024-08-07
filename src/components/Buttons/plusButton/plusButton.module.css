@@ -1,31 +1,32 @@
-.addBlueButton {
+.plusButton {
   padding: 0 32px;
   border: none;
   height: 58px;
   font-weight: 600;
   text-align: center;
-  border-radius: var(--border-radius-small);
+  border-radius: 8px; /* Пример значения для --border-radius-small */
   cursor: pointer;
-  transition: var(--transition-duration);
-  background-color: var(--color-blue);
-  color: var(--color-light);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Пример значения для --transition-duration */
+  background-color: #007bff; /* Пример значения для --color-blue */
+  color: #ffffff; /* Пример значения для --color-light */
   white-space: nowrap;
   z-index: 10;
 }
 
-.addBlueButton:hover {
-  background-color: var(--color-dark);
-  color: var(--color-light);
+.plusButton:hover {
+  background-color: #343a40; /* Пример значения для --color-dark */
+  color: #ffffff; /* Пример значения для --color-light */
 }
 
-.addBlueButton:active {
-  background-color: var(--color-light);
-  color: var(--color-dark);
-  border: 1px solid var(--color-dark);
+.plusButton:active {
+  transform: scale(1.1);
+  background-color: #ffffff; /* Пример значения для --color-light */
+  color: #343a40; /* Пример значения для --color-dark */
+  border: 1px solid #343a40; /* Пример значения для --color-dark */
 }
 
-.addedState {
-  background-color: var(--color-light);
-  color: var(--color-dark);
-  border: 1px solid var(--color-dark);
+.plusedState {
+  background-color: #ffffff; /* Пример значения для --color-light */
+  color: #343a40; /* Пример значения для --color-dark */
+  border: 1px solid #343a40; /* Пример значения для --color-dark */
 }

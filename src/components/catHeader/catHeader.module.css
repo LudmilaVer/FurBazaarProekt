@@ -33,7 +33,7 @@
 
 .CatItem:hover {
   transform: scale(1.05) rotate(3deg);
-  color: #166bb9; /* Томато */
+  color: #0f5f77; /* Томато */
 }
 
 .CatItem:hover .CatImage {
