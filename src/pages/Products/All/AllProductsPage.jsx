@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 
-import cranbNav from '../../../components/cranbNav/cranbNav';
+import CranbNav from '../../../components/cranbNav/cranbNav';
 import ProductCard from "../../../components/ProductCard/ProductCard";
 import Filter from "../../../components/QuantityContainer/Filter/Filter";
 import Items from "../../../components/QuantityContainer/Items/Items";
@@ -88,7 +88,7 @@ function AllProductsPage() {
   return (
     <div className="globalContainer">
       <div className={styles.allProductsPage}>
-        <cranbNav
+        <CranbNav
           items={[
             { path: '/', label: 'Main page' },
             { path: '/categories', label: 'All products', isActive: true }

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from '../payNowButton/payNowButton';
+import styles from './PayButton.module.css';
 
-function CheckOutButton() {
+function PayButton() {
   return (
     <Link to="/discounted-products" className={styles.buttonStyle}>
       Check out
@@ -10,4 +10,4 @@ function CheckOutButton() {
   );
 }
 
-export default CheckOutButton;
+export default PayButton;

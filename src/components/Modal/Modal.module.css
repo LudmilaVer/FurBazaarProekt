@@ -14,7 +14,7 @@
 
 .ModalContent {
   position: relative;
-  background: var(--color-blue);
+  background: var(--color-blue); /* Заданный синий фон */
   color: var(--color-light);
   padding: 32px 92px 32px 32px;
   border-radius: var(--border-radius-large);
@@ -23,6 +23,7 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
+  animation: rainbowText 10s ease-in-out, setFinalState 0s 10s forwards; /* Две анимации */
 }
 
 .ModalContent h2 {
@@ -54,4 +55,20 @@
 .CloseButton:hover {
   color: var(--color-light);
   opacity: 1;
+}
+
+@keyframes rainbowText {
+  0% { color: red; }
+  14.28% { color: orange; }
+  28.56% { color: yellow; }
+  42.84% { color: green; }
+  57.12% { color: blue; }
+  71.40% { color: indigo; }
+  85.68% { color: violet; }
+  100% { color: red; }
+}
+
+@keyframes setFinalState {
+  0% { color: white; }
+  100% { color: white; }
 }

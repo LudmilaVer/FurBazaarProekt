@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 
-import cranbNav from '../../../components/cranbNav/cranbNav';
+import CranbNav from '../../../components/cranbNav/cranbNav';
 import ProductCard from '../../../components/ProductCard/ProductCard';
 import Filter from '../../../components/QuantityContainer/Filter/Filter';
 import QuantitySelector from '../../../components/QuantityContainer/QuantitySelector/QuantitySelector';
@@ -83,7 +83,7 @@ const DiscountedProductsPage = () => {
   return (
     <div className="globalContainer">
       <div className={styles.discountedProductsPage}>
-        <cranbNav
+        <CranbNav
           items={[
             { path: '/', label: 'Main page' },
             { path: '/categories', label: 'Discounted items', isActive: true }
