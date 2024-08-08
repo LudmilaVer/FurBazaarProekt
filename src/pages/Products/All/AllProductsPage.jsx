@@ -41,10 +41,16 @@ function AllProductsPage() {
       const minPrice = parseFloat(searchParams.get("minPrice")) || 0;
       const maxPrice = parseFloat(searchParams.get("maxPrice")) || Infinity;
       const includeDiscount = searchParams.get("includeDiscount") === "true";
-
-      if (product.price < minPrice || product.price > maxPrice) {
-        return false;
+      if (product.discont_price) {
+        if (product.discont_price < minPrice || product.discont_price > maxPrice) {
+          return false;
+        } 
+       } else {
+        if (product.price < minPrice || product.price > maxPrice) {
+          return false;
+        }
       }
+      
 
       if (includeDiscount && !product.discont_price) {
         return false;

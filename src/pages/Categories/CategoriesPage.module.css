@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(200px, 1fr));
   gap: 32px;
+
   margin-top: 30px;
   z-index: 1;
 }
@@ -28,7 +29,7 @@
 
 .CatImage {
   width: 100%;
-  height: 350px;
+  /* height: 350px; */
   object-fit: cover;
   border-radius: var(--border-radius-large);
   transition: transform 0.3s ease-in-out; /* Плавный переход */
@@ -54,9 +55,9 @@
     gap: 24px;
   }
 
-  .CatImage {
+  /* .CatImage {
     height: 300px;
-  }
+  } */
 
   .CatImage {
     font-size: 18px;
@@ -71,10 +72,10 @@
     gap: 20px;
   }
 
-  .CatImage {
+  /* .CatImage {
     height: 250px;
    
-  }
+  } */
 
   .CatImage {
     font-size: 16px;
@@ -89,9 +90,9 @@
     gap: 16px;
   }
 
-  .CatImage {
+  /* .CatImage {
     height: 200px;
-  }
+  } */
 
   .CatImage {
     font-size: 14px;
@@ -106,10 +107,10 @@
     gap: 12px;
   }
 
-  .CatImage {
+  /* .CatImage {
     width: 350px;
     height: 200px;
-  }
+  } */
 
   .CatImage {
     font-size: 12px;

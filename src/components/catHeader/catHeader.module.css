@@ -25,7 +25,7 @@
 
 .CatImage {
   width: 100%;
-  height: 350px;
+  /* height: 350px; */
   object-fit: cover;
   border-radius: var(--border-radius-large);
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
@@ -33,7 +33,7 @@
 
 .CatItem:hover {
   transform: scale(1.05) rotate(3deg);
-  color: #0f5f77; /* Томато */
+  color: #0f5f77; 
 }
 
 .CatItem:hover .CatImage {
@@ -53,9 +53,9 @@
     gap: 24px;
   }
 
-  .CatImage {
+  /* .CatImage {
     height: 300px;
-  }
+  } */
 
   .CatImage {
     font-size: 18px;
@@ -69,9 +69,9 @@
     gap: 20px;
   }
 
-  .CatImage {
+  /* .CatImage {
     height: 250px;
-  }
+  } */
 
   .CatImage {
     font-size: 16px;
@@ -85,9 +85,9 @@
     gap: 16px;
   }
 
-  .CatImage {
+  /* .CatImage {
     height: 200px;
-  }
+  } */
 
   .CatImage {
     font-size: 14px;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
-import cranbNav from '../../components/cranbNav/cranbNav';
+import CranbNav from '../../components/cranbNav/cranbNav';
 import styles from '../Categories/CategoriesPage.module.css';
 
 const CategoriesBlock = () => {
@@ -26,7 +26,7 @@ const CategoriesBlock = () => {
     <div className="globalContainer">
       <div className={styles.categoriesPage}>
 
-        <cranbNav
+        <CranbNav
           items={[
             { path: '/', label: 'Main page' },
             { path: '/categories', label: 'Categories', isActive: true }
